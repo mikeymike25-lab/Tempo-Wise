@@ -1,0 +1,671 @@
+/* Pomodoro Focus Timer Styles - Clean White & Forest Green Brand Theme */
+
+.focus-timer-page {
+  --ion-background-color: #FFFFFF;
+  background: #FFFFFF;
+}
+
+.focus-timer-toolbar {
+  --background: #FFFFFF;
+  --border-width: 0 0 1px 0;
+  --border-color: rgba(0, 0, 0, 0.05);
+  padding: 0 6px;
+  min-height: 56px;
+}
+
+.focus-header-title {
+  color: #1B4332 !important;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  text-align: center;
+}
+
+/* Settings button - refined & not oversized */
+.focus-settings-btn {
+  --color: #1B4332;
+  --color-hover: #2D6A4F;
+  --padding-start: 6px;
+  --padding-end: 6px;
+  width: 36px;
+  height: 36px;
+  margin: 0;
+}
+
+.focus-settings-btn ion-icon {
+  font-size: 1.25rem !important;
+  color: #1B4332;
+}
+
+.focus-timer-content {
+  --background: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Main Screen Flex Container */
+.focus-timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 12px 20px 24px 20px;
+  box-sizing: border-box;
+  position: relative;
+  background: transparent;
+  z-index: 1;
+}
+
+/* Subtle ambient glow behind ring */
+.focus-ambient-glow {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(116, 198, 157, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Background Waves */
+.focus-waves-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 230px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.focus-waves-bg svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* SVG Circular Timer Ring */
+.timer-ring-wrapper {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.timer-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg); /* Start countdown from 12 o'clock */
+}
+
+.timer-track {
+  fill: none;
+  stroke: #E8F5E9; /* Soft light sage/green track */
+}
+
+.timer-progress {
+  fill: none;
+  stroke: var(--ion-color-secondary, #74C69D); /* Theme green progress arc */
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 2px 8px rgba(116, 198, 157, 0.45));
+}
+
+/* Center Content inside Ring */
+.timer-center-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.timer-sprout-icon {
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer-digits {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #1B4332; /* Deep forest green */
+  letter-spacing: -1.5px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 6px;
+}
+
+.timer-subtitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #6B7280;
+  letter-spacing: 0.2px;
+}
+
+/* Associated Task Selector */
+.focus-task-selector {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(116, 198, 157, 0.4);
+  padding: 8px 18px;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 1;
+  max-width: 85%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.focus-task-selector:active {
+  background: #F0FDF4;
+  border-color: #74C69D;
+  transform: scale(0.98);
+}
+
+.focus-task-title {
+  color: #1B4332;
+  font-size: 0.95rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.focus-task-dropdown-icon {
+  color: #2D6A4F;
+  font-size: 0.9rem;
+}
+
+/* Action Controls Row */
+.focus-controls-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  margin: 10px 0 15px 0;
+  z-index: 1;
+}
+
+.focus-secondary-control {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(116, 198, 157, 0.15);
+  border: 1px solid rgba(116, 198, 157, 0.3);
+  color: #1B4332;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.focus-secondary-control:active {
+  transform: scale(0.92);
+  background: rgba(116, 198, 157, 0.25);
+}
+
+/* Theme Green Play/Pause Button */
+.focus-main-play-btn {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--ion-color-secondary, #74C69D);
+  border: none;
+  color: #FFFFFF;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(116, 198, 157, 0.5);
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s, background-color 0.2s;
+}
+
+.focus-main-play-btn:hover {
+  background: #62be91;
+}
+
+.focus-main-play-btn:active {
+  transform: scale(0.94);
+  box-shadow: 0 4px 12px rgba(116, 198, 157, 0.35);
+}
+
+.focus-main-play-btn ion-icon {
+  color: #FFFFFF;
+  margin-left: 2px; /* optical center for play triangle */
+}
+
+.focus-main-play-btn.is-active ion-icon {
+  margin-left: 0;
+}
+
+/* Floating Mode Selector Pill (Bottom) */
+.focus-mode-pills-bar {
+  display: flex;
+  align-items: center;
+  background: #F3F4F6;
+  border: 1px solid #E5E7EB;
+  border-radius: 36px;
+  padding: 4px;
+  gap: 4px;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.focus-mode-pill {
+  border: none;
+  background: transparent;
+  color: #6B7280;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 9px 18px;
+  border-radius: 28px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Active Pill Highlight - Green */
+.focus-mode-pill.active {
+  background: var(--ion-color-secondary, #74C69D);
+  color: #FFFFFF;
+  font-weight: 700;
+  box-shadow: 0 3px 10px rgba(116, 198, 157, 0.45);
+}
+
+/* Sheet Modal Styling for Settings & Task linking */
+.focus-modal-sheet {
+  --background: #FFFFFF;
+  --border-radius: 24px 24px 0 0;
+}
+
+.modal-sheet-content {
+  padding: 20px 20px 30px 20px;
+  background: #FFFFFF;
+  color: #1B1B1B;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.modal-sheet-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.modal-sheet-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1B4332;
+}
+
+.modal-section-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #6B7280;
+  margin: 16px 0 8px 0;
+}
+
+/* Custom Task Box */
+.modal-custom-task-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #F3F4F6;
+  padding: 4px 8px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.custom-task-input {
+  --background: transparent;
+  --padding-start: 8px;
+  font-size: 0.95rem;
+}
+
+.modal-tasks-list {
+  background: transparent;
+}
+
+.modal-tasks-list ion-item {
+  --background: transparent;
+  --border-color: #E5E7EB;
+  --padding-start: 4px;
+}
+
+.modal-tasks-list ion-item h2 {
+  font-weight: 600;
+  color: #1F2937;
+}
+
+.modal-tasks-list ion-item p {
+  color: #6B7280;
+  font-size: 0.85rem;
+}
+
+.task-item-selected {
+  --background: rgba(116, 198, 157, 0.15) !important;
+  border-radius: 10px;
+}
+
+/* Presets Grid */
+.presets-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.preset-card {
+  border: 2px solid #E5E7EB;
+  border-radius: 14px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #F9FAFB;
+}
+
+.preset-card.selected {
+  border-color: var(--ion-color-secondary, #74C69D);
+  background: rgba(116, 198, 157, 0.12);
+}
+
+.preset-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1B4332;
+  margin-bottom: 4px;
+}
+
+.preset-desc {
+  font-size: 0.8rem;
+  color: #6B7280;
+}
+
+.custom-durations-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.duration-input-item {
+  --background: #F3F4F6;
+  --border-radius: 10px;
+  --padding-start: 12px;
+}
+
+.settings-toggle-list {
+  background: transparent;
+}
+
+.settings-toggle-list ion-item {
+  --background: transparent;
+  --border-color: #E5E7EB;
+  --padding-start: 0;
+}
+
+.settings-toggle-list ion-item h2 {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #1F2937;
+}
+
+.settings-toggle-list ion-item p {
+  font-size: 0.8rem;
+  color: #6B7280;
+}
+
+.modal-save-container {
+  margin-top: 24px;
+}
+
+/* ==========================================================================
+   Dark Mode Overrides
+   ========================================================================== */
+
+.ion-palette-dark .focus-timer-page,
+.dark .focus-timer-page {
+  --ion-background-color: #0F1713;
+  background: #0F1713;
+}
+
+.ion-palette-dark .focus-timer-toolbar,
+.dark .focus-timer-toolbar {
+  --background: #0F1713;
+  --border-color: rgba(82, 183, 136, 0.12);
+}
+
+.ion-palette-dark .focus-header-title,
+.dark .focus-header-title {
+  color: #ECFDF5 !important;
+}
+
+.ion-palette-dark .focus-settings-btn,
+.dark .focus-settings-btn,
+.ion-palette-dark .focus-settings-btn ion-icon,
+.dark .focus-settings-btn ion-icon {
+  color: #52B788 !important;
+  --color: #52B788 !important;
+}
+
+.ion-palette-dark .focus-timer-content,
+.dark .focus-timer-content {
+  --background: #0F1713;
+}
+
+.ion-palette-dark .focus-ambient-glow,
+.dark .focus-ambient-glow {
+  background: radial-gradient(circle, rgba(82, 183, 136, 0.18) 0%, rgba(15, 23, 19, 0) 70%);
+}
+
+.ion-palette-dark .timer-track,
+.dark .timer-track {
+  stroke: #182820;
+}
+
+.ion-palette-dark .timer-progress,
+.dark .timer-progress {
+  stroke: #52B788;
+  filter: drop-shadow(0 2px 10px rgba(82, 183, 136, 0.6));
+}
+
+.ion-palette-dark .timer-digits,
+.dark .timer-digits {
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .timer-subtitle,
+.dark .timer-subtitle {
+  color: #9CA3AF;
+}
+
+.ion-palette-dark .focus-task-selector,
+.dark .focus-task-selector {
+  background: #182820;
+  border-color: rgba(82, 183, 136, 0.35);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.ion-palette-dark .focus-task-selector:active,
+.dark .focus-task-selector:active {
+  background: #1F3528;
+  border-color: #52B788;
+}
+
+.ion-palette-dark .focus-task-title,
+.dark .focus-task-title {
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .focus-task-dropdown-icon,
+.dark .focus-task-dropdown-icon {
+  color: #52B788;
+}
+
+.ion-palette-dark .focus-secondary-control,
+.dark .focus-secondary-control {
+  background: rgba(82, 183, 136, 0.15);
+  border-color: rgba(82, 183, 136, 0.3);
+  color: #52B788;
+}
+
+.ion-palette-dark .focus-secondary-control:active,
+.dark .focus-secondary-control:active {
+  background: rgba(82, 183, 136, 0.25);
+}
+
+.ion-palette-dark .focus-main-play-btn,
+.dark .focus-main-play-btn {
+  background: #52B788;
+  color: #0F1713;
+  box-shadow: 0 8px 24px rgba(82, 183, 136, 0.45);
+}
+
+.ion-palette-dark .focus-main-play-btn:hover,
+.dark .focus-main-play-btn:hover {
+  background: #63BE94;
+}
+
+.ion-palette-dark .focus-main-play-btn ion-icon,
+.dark .focus-main-play-btn ion-icon {
+  color: #0F1713;
+}
+
+.ion-palette-dark .focus-mode-pills-bar,
+.dark .focus-mode-pills-bar {
+  background: #182820;
+  border-color: #2F4538;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.ion-palette-dark .focus-mode-pill,
+.dark .focus-mode-pill {
+  color: #9CA3AF;
+}
+
+.ion-palette-dark .focus-mode-pill.active,
+.dark .focus-mode-pill.active {
+  background: #52B788;
+  color: #0F1713;
+  box-shadow: 0 3px 10px rgba(82, 183, 136, 0.4);
+}
+
+/* Modal Dark Styles */
+.ion-palette-dark .focus-modal-sheet,
+.dark .focus-modal-sheet {
+  --background: #182820;
+}
+
+.ion-palette-dark .modal-sheet-content,
+.dark .modal-sheet-content {
+  background: #182820;
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .modal-sheet-header h3,
+.dark .modal-sheet-header h3 {
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .modal-section-label,
+.dark .modal-section-label {
+  color: #9CA3AF;
+}
+
+.ion-palette-dark .modal-custom-task-box,
+.dark .modal-custom-task-box {
+  background: #142019;
+  border: 1px solid #2F4538;
+}
+
+.ion-palette-dark .custom-task-input,
+.dark .custom-task-input {
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .modal-tasks-list ion-item,
+.dark .modal-tasks-list ion-item {
+  --border-color: #2F4538;
+}
+
+.ion-palette-dark .modal-tasks-list ion-item h2,
+.dark .modal-tasks-list ion-item h2 {
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .modal-tasks-list ion-item p,
+.dark .modal-tasks-list ion-item p {
+  color: #9CA3AF;
+}
+
+.ion-palette-dark .task-item-selected,
+.dark .task-item-selected {
+  --background: rgba(82, 183, 136, 0.2) !important;
+}
+
+.ion-palette-dark .preset-card,
+.dark .preset-card {
+  border-color: #2F4538;
+  background: #142019;
+}
+
+.ion-palette-dark .preset-card.selected,
+.dark .preset-card.selected {
+  border-color: #52B788;
+  background: rgba(82, 183, 136, 0.18);
+}
+
+.ion-palette-dark .preset-title,
+.dark .preset-title {
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .preset-desc,
+.dark .preset-desc {
+  color: #9CA3AF;
+}
+
+.ion-palette-dark .duration-input-item,
+.dark .duration-input-item {
+  --background: #142019;
+  border: 1px solid #2F4538;
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .settings-toggle-list ion-item,
+.dark .settings-toggle-list ion-item {
+  --border-color: #2F4538;
+}
+
+.ion-palette-dark .settings-toggle-list ion-item h2,
+.dark .settings-toggle-list ion-item h2 {
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .settings-toggle-list ion-item p,
+.dark .settings-toggle-list ion-item p {
+  color: #9CA3AF;
+}
+

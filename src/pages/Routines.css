@@ -1,0 +1,722 @@
+.routines-page {
+  --ion-background-color: #FFFFFF;
+  background: #FFFFFF;
+}
+
+.routines-toolbar {
+  --background: #FFFFFF;
+  --border-width: 0 0 1px 0;
+  --border-color: rgba(27, 67, 50, 0.06);
+  padding: 0 6px;
+  min-height: 56px;
+}
+
+.routines-toolbar ion-title {
+  color: #1B4332 !important;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.routine-header-add-btn {
+  --color: #74C69D;
+  font-size: 1.4rem;
+  height: 40px;
+  width: 40px;
+  margin-right: 4px;
+}
+
+.routines-content {
+  --background: #FFFFFF;
+  position: relative;
+}
+
+.routines-scroll-container {
+  position: relative;
+  z-index: 1;
+  padding: 16px 20px;
+  padding-bottom: 110px; /* Space for bottom floating button */
+  background: transparent;
+}
+
+/* Background Waves */
+.routines-waves-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 230px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.routines-waves-bg svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Summary Statistics Banner */
+.routines-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.summary-stat-card {
+  background: #F2F7F4;
+  border-radius: 16px;
+  padding: 12px 10px;
+  text-align: center;
+  border: 1px solid rgba(27, 67, 50, 0.06);
+}
+
+.stat-value {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #1B4332;
+  line-height: 1.1;
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.stat-value.stat-success {
+  color: #2D6A4F;
+}
+
+.stat-value.stat-streak {
+  color: #D97706;
+}
+
+.streak-icon {
+  font-size: 1.1rem;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6B7280;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* Routine Segment Tabs */
+.routine-segment-wrapper {
+  margin-bottom: 18px;
+}
+
+.routines-main-segment {
+  display: flex;
+  background: #F3F4F6;
+  border: 1px solid #E5E7EB;
+  border-radius: 36px;
+  padding: 4px;
+  gap: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.routines-main-segment ion-segment-button {
+  --background: transparent;
+  --background-checked: var(--ion-color-secondary, #74C69D);
+  --color-checked: #FFFFFF;
+  --color: #6B7280;
+  --indicator-color: transparent;
+  border-radius: 28px;
+  min-height: 38px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.routines-main-segment ion-segment-button.segment-button-checked {
+  box-shadow: 0 3px 10px rgba(116, 198, 157, 0.45);
+  font-weight: 700;
+}
+
+/* Routine Cards List */
+.routines-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.routine-card {
+  background: #FFFFFF;
+  border-radius: 18px;
+  padding: 16px;
+  margin: 0;
+  border: 1.5px solid rgba(27, 67, 50, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.routine-card:hover {
+  border-color: rgba(116, 198, 157, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.routine-card.routine-card-complete {
+  border-color: rgba(116, 198, 157, 0.6);
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAFCFA 100%);
+  box-shadow: 0 4px 18px rgba(116, 198, 157, 0.15);
+}
+
+/* Card Header */
+.routine-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.routine-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.routine-icon-badge {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.3rem;
+  background: rgba(116, 198, 157, 0.2);
+  color: #1B4332;
+}
+
+.routine-icon-badge.morning {
+  background: rgba(250, 204, 21, 0.2);
+  color: #B45309;
+}
+
+.routine-icon-badge.evening {
+  background: rgba(99, 102, 241, 0.15);
+  color: #4338CA;
+}
+
+.routine-icon-badge.study {
+  background: rgba(16, 185, 129, 0.15);
+  color: #047857;
+}
+
+.routine-icon-badge.fitness {
+  background: rgba(249, 115, 22, 0.15);
+  color: #C2410C;
+}
+
+.routine-icon-badge.wellness {
+  background: rgba(236, 72, 153, 0.15);
+  color: #BE185D;
+}
+
+.routine-icon-badge.work {
+  background: rgba(59, 130, 246, 0.15);
+  color: #1D4ED8;
+}
+
+.routine-title-box {
+  flex: 1;
+}
+
+.routine-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1B4332;
+  margin: 0 0 3px 0;
+  letter-spacing: -0.2px;
+}
+
+.routine-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #6B7280;
+  font-weight: 500;
+}
+
+.routine-type-tag {
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #2D6A4F;
+}
+
+.meta-dot {
+  color: #A0A4A8;
+}
+
+.routine-time-tag {
+  color: #6B7280;
+}
+
+/* Header Right */
+.routine-header-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.routine-streak-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  background: rgba(217, 119, 6, 0.12);
+  color: #D97706;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.routine-streak-pill ion-icon {
+  font-size: 0.9rem;
+}
+
+.routine-options-btn {
+  background: transparent;
+  border: none;
+  color: #6B7280;
+  font-size: 1.15rem;
+  padding: 4px;
+  cursor: pointer;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease;
+}
+
+.routine-options-btn:hover {
+  background: #F2F7F4;
+  color: #1B4332;
+}
+
+/* Progress Container */
+.routine-progress-container {
+  margin-bottom: 12px;
+}
+
+.routine-progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+  color: #6B7280;
+  font-weight: 500;
+}
+
+.progress-counter {
+  color: #4B5563;
+}
+
+.progress-percentage {
+  font-weight: 700;
+  color: #1B4332;
+}
+
+.progress-percentage.complete {
+  color: #2D6A4F;
+}
+
+.routine-progress-bar {
+  --background: #EBF3EE;
+  --progress-background: var(--ion-color-secondary, #74C69D);
+  height: 6px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.routine-card-complete .routine-progress-bar {
+  --progress-background: #4ADE80;
+}
+
+/* Steps Checklist Container */
+.routine-checklist-container {
+  margin-bottom: 10px;
+}
+
+/* Completed Banner */
+.routine-complete-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(116, 198, 157, 0.18);
+  border: 1px solid rgba(116, 198, 157, 0.35);
+  border-radius: 12px;
+  padding: 8px 12px;
+  margin-top: 6px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #1B4332;
+}
+
+.routine-complete-banner ion-icon {
+  font-size: 1.15rem;
+  color: #2D6A4F;
+}
+
+/* Card Action Footer */
+.routine-card-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(27, 67, 50, 0.05);
+}
+
+.routine-footer-action-btn {
+  background: transparent;
+  border: none;
+  color: #2D6A4F;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+
+.routine-footer-action-btn:hover {
+  background: #F2F7F4;
+  color: #1B4332;
+}
+
+.routine-footer-action-btn ion-icon {
+  font-size: 0.95rem;
+}
+
+/* Empty State */
+.routines-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+  margin-top: 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+.empty-icon-box {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background-color: rgba(116, 198, 157, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.empty-icon-box ion-icon {
+  font-size: 38px;
+  color: #1B4332;
+}
+
+.routines-empty-state h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1B4332;
+  margin: 0 0 6px 0;
+}
+
+.routines-empty-state p {
+  font-size: 0.92rem;
+  color: #6B7280;
+  margin: 0 0 20px 0;
+  max-width: 280px;
+  line-height: 1.4;
+}
+
+.empty-create-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--ion-color-secondary, #74C69D);
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(116, 198, 157, 0.4);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.empty-create-btn:hover {
+  background: #62be91;
+  transform: translateY(-1px);
+}
+
+/* Floating Pill Button */
+.floating-pill-container {
+  position: fixed;
+  bottom: calc(var(--ion-tab-bar-height, 56px) + 16px);
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  padding: 0 24px;
+}
+
+.pill-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--ion-color-secondary, #74C69D);
+  color: #ffffff;
+  height: 54px;
+  width: 100%;
+  border-radius: 27px;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  box-shadow: 0 8px 20px rgba(116, 198, 157, 0.45);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.pill-button:hover {
+  background-color: #62be91;
+}
+
+.pill-button:active {
+  transform: scale(0.97);
+  box-shadow: 0 4px 10px rgba(116, 198, 157, 0.35);
+}
+
+/* ==========================================================================
+   Dark Mode Overrides
+   ========================================================================== */
+
+.ion-palette-dark .routines-page,
+.dark .routines-page {
+  --ion-background-color: #0F1713;
+  background: #0F1713;
+}
+
+.ion-palette-dark .routines-toolbar,
+.dark .routines-toolbar {
+  --background: #0F1713;
+  --border-color: rgba(82, 183, 136, 0.12);
+}
+
+.ion-palette-dark .routines-toolbar ion-title,
+.dark .routines-toolbar ion-title {
+  color: #ECFDF5 !important;
+}
+
+.ion-palette-dark .routine-header-add-btn,
+.dark .routine-header-add-btn {
+  --color: #52B788;
+}
+
+.ion-palette-dark .routines-content,
+.dark .routines-content {
+  --background: #0F1713;
+}
+
+.ion-palette-dark .summary-stat-card,
+.dark .summary-stat-card {
+  background: #182820;
+  border-color: rgba(82, 183, 136, 0.18);
+}
+
+.ion-palette-dark .stat-value,
+.dark .stat-value {
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .stat-value.stat-success,
+.dark .stat-value.stat-success {
+  color: #52B788;
+}
+
+.ion-palette-dark .stat-label,
+.dark .stat-label {
+  color: #9CA3AF;
+}
+
+.ion-palette-dark .routines-main-segment,
+.dark .routines-main-segment {
+  background: #182820;
+  border-color: #2F4538;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.ion-palette-dark .routines-main-segment ion-segment-button,
+.dark .routines-main-segment ion-segment-button {
+  --color: #9CA3AF;
+  --background-checked: #52B788;
+  --color-checked: #0F1713;
+}
+
+.ion-palette-dark .routines-main-segment ion-segment-button.segment-button-checked,
+.dark .routines-main-segment ion-segment-button.segment-button-checked {
+  box-shadow: 0 3px 10px rgba(82, 183, 136, 0.4);
+}
+
+.ion-palette-dark .routine-card,
+.dark .routine-card {
+  background: #182820;
+  border-color: rgba(82, 183, 136, 0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.ion-palette-dark .routine-card:hover,
+.dark .routine-card:hover {
+  border-color: rgba(82, 183, 136, 0.35);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+.ion-palette-dark .routine-card.routine-card-complete,
+.dark .routine-card.routine-card-complete {
+  border-color: rgba(82, 183, 136, 0.45);
+  background: #142019;
+  box-shadow: 0 4px 18px rgba(82, 183, 136, 0.15);
+}
+
+.ion-palette-dark .routine-card-title,
+.dark .routine-card-title {
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .routine-card-meta,
+.dark .routine-card-meta {
+  color: #9CA3AF;
+}
+
+.ion-palette-dark .routine-type-tag,
+.dark .routine-type-tag {
+  color: #52B788;
+}
+
+.ion-palette-dark .routine-time-tag,
+.dark .routine-time-tag {
+  color: #9CA3AF;
+}
+
+.ion-palette-dark .routine-options-btn,
+.dark .routine-options-btn {
+  color: #9CA3AF;
+}
+
+.ion-palette-dark .routine-options-btn:hover,
+.dark .routine-options-btn:hover {
+  background: #1F3528;
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .routine-progress-info,
+.dark .routine-progress-info {
+  color: #9CA3AF;
+}
+
+.ion-palette-dark .progress-counter,
+.dark .progress-counter {
+  color: #9CA3AF;
+}
+
+.ion-palette-dark .progress-percentage,
+.dark .progress-percentage {
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .progress-percentage.complete,
+.dark .progress-percentage.complete {
+  color: #52B788;
+}
+
+.ion-palette-dark .routine-progress-bar,
+.dark .routine-progress-bar {
+  --background: #142019;
+  --progress-background: #52B788;
+}
+
+.ion-palette-dark .routine-complete-banner,
+.dark .routine-complete-banner {
+  background: rgba(82, 183, 136, 0.18);
+  border-color: rgba(82, 183, 136, 0.35);
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .routine-complete-banner ion-icon,
+.dark .routine-complete-banner ion-icon {
+  color: #52B788;
+}
+
+.ion-palette-dark .routine-card-footer,
+.dark .routine-card-footer {
+  border-color: rgba(82, 183, 136, 0.12);
+}
+
+.ion-palette-dark .routine-footer-action-btn,
+.dark .routine-footer-action-btn {
+  color: #52B788;
+}
+
+.ion-palette-dark .routine-footer-action-btn:hover,
+.dark .routine-footer-action-btn:hover {
+  background: #1F3528;
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .empty-icon-box,
+.dark .empty-icon-box {
+  background-color: rgba(82, 183, 136, 0.15);
+}
+
+.ion-palette-dark .empty-icon-box ion-icon,
+.dark .empty-icon-box ion-icon {
+  color: #52B788;
+}
+
+.ion-palette-dark .routines-empty-state h4,
+.dark .routines-empty-state h4 {
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .routines-empty-state p,
+.dark .routines-empty-state p {
+  color: #9CA3AF;
+}
+
+.ion-palette-dark .empty-create-btn,
+.dark .empty-create-btn {
+  background: #52B788;
+  color: #0F1713;
+  box-shadow: 0 4px 14px rgba(82, 183, 136, 0.4);
+}
+
+.ion-palette-dark .empty-create-btn:hover,
+.dark .empty-create-btn:hover {
+  background: #63BE94;
+}
+
+.ion-palette-dark .pill-button,
+.dark .pill-button {
+  background-color: #52B788;
+  color: #0F1713;
+  box-shadow: 0 8px 20px rgba(82, 183, 136, 0.35);
+}
+
+.ion-palette-dark .pill-button:hover,
+.dark .pill-button:hover {
+  background-color: #63BE94;
+}
+

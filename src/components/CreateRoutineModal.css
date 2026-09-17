@@ -1,0 +1,503 @@
+.routine-modal-sheet {
+  --background: #FFFFFF;
+  --border-radius: 24px 24px 0 0;
+}
+
+.routine-modal-header {
+  --background: #FFFFFF;
+}
+
+.routine-modal-toolbar {
+  --background: #FFFFFF;
+  --border-color: rgba(27, 67, 50, 0.08);
+  --border-width: 0 0 1px 0;
+  padding: 4px 12px;
+}
+
+.routine-modal-title {
+  color: #1B4332;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.routine-modal-close-btn {
+  --color: #1B4332;
+  font-size: 1.4rem;
+}
+
+.routine-modal-content {
+  --background: #FFFFFF;
+}
+
+.routine-modal-scroll-inner {
+  padding: 16px 20px 32px 20px;
+}
+
+.routine-error-banner {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #DC2626;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.routine-form-group {
+  margin-bottom: 20px;
+}
+
+.routine-field-label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1B4332;
+  margin-bottom: 8px;
+  letter-spacing: -0.1px;
+}
+
+.routine-text-input {
+  --background: #F2F7F4;
+  --padding-start: 14px;
+  --padding-end: 14px;
+  --placeholder-color: #88968F;
+  --color: #1B1B1B;
+  border-radius: 14px;
+  border: 1.5px solid transparent;
+  font-size: 0.95rem;
+  font-weight: 500;
+  min-height: 48px;
+  transition: border-color 0.2s ease;
+}
+
+.routine-text-input:focus-within {
+  border-color: #74C69D;
+}
+
+/* Frequency Type Segment */
+.routine-type-segment {
+  background: #F2F7F4;
+  border-radius: 14px;
+  padding: 4px;
+}
+
+.routine-type-segment ion-segment-button {
+  --background: transparent;
+  --background-checked: var(--ion-color-secondary, #74C69D);
+  --color-checked: #FFFFFF;
+  --color: #6B7280;
+  --indicator-color: transparent;
+  border-radius: 10px;
+  min-height: 36px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.routine-type-segment ion-segment-button.segment-button-checked {
+  box-shadow: 0 3px 10px rgba(116, 198, 157, 0.45);
+  font-weight: 700;
+}
+
+/* Category Chips */
+.category-chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.category-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: #F2F7F4;
+  border: 1.5px solid rgba(27, 67, 50, 0.08);
+  color: #1B4332;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.category-chip ion-icon {
+  font-size: 1rem;
+}
+
+.category-chip:hover {
+  background: #E5EFE9;
+}
+
+.category-chip.active {
+  background: var(--ion-color-secondary, #74C69D);
+  border-color: var(--ion-color-secondary, #74C69D);
+  color: #FFFFFF;
+  box-shadow: 0 3px 10px rgba(116, 198, 157, 0.4);
+  font-weight: 700;
+}
+
+/* Steps Builder */
+.steps-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.steps-count-hint {
+  font-size: 0.78rem;
+  color: #74C69D;
+  font-weight: 600;
+}
+
+.steps-builder-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.builder-step-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #F2F7F4;
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(27, 67, 50, 0.06);
+}
+
+.builder-step-number {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #74C69D;
+  color: #1B4332;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.builder-step-text {
+  flex: 1;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1B1B1B;
+}
+
+.builder-step-delete-btn {
+  background: transparent;
+  border: none;
+  color: #EF4444;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: background 0.15s ease;
+}
+
+.builder-step-delete-btn:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+/* Add Step Input */
+.add-step-input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.step-text-input {
+  --background: #FFFFFF;
+  --padding-start: 12px;
+  --padding-end: 12px;
+  --placeholder-color: #88968F;
+  --color: #1B1B1B;
+  border-radius: 12px;
+  border: 1.5px solid #D6E4DB;
+  font-size: 0.9rem;
+  min-height: 44px;
+  flex: 1;
+}
+
+.step-text-input:focus-within {
+  border-color: #74C69D;
+}
+
+.add-step-btn {
+  --background: var(--ion-color-secondary, #74C69D);
+  --background-hover: #62be91;
+  --background-activated: #52B788;
+  --color: #FFFFFF;
+  --border-radius: 12px;
+  --padding-start: 12px;
+  --padding-end: 12px;
+  height: 44px;
+  margin: 0;
+  font-weight: 700;
+  box-shadow: 0 3px 10px rgba(116, 198, 157, 0.35);
+}
+
+/* Quick Suggestions */
+.suggestions-container {
+  margin-top: 14px;
+  background: #FAF7F0;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(27, 67, 50, 0.08);
+}
+
+.suggestions-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #1B4332;
+  margin-bottom: 8px;
+}
+
+.suggestions-title ion-icon {
+  color: #74C69D;
+  font-size: 0.95rem;
+}
+
+.suggestions-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.suggestion-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 10px;
+  border-radius: 16px;
+  background: #FFFFFF;
+  border: 1px solid rgba(27, 67, 50, 0.1);
+  color: #1B4332;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.suggestion-pill ion-icon {
+  font-size: 0.85rem;
+}
+
+.suggestion-pill:hover:not(:disabled) {
+  background: var(--ion-color-secondary, #74C69D);
+  color: #FFFFFF;
+  border-color: var(--ion-color-secondary, #74C69D);
+}
+
+.suggestion-pill.added {
+  background: rgba(116, 198, 157, 0.2);
+  border-color: #74C69D;
+  color: #1B4332;
+}
+
+.suggestion-pill:disabled {
+  opacity: 0.5;
+  cursor: default;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+/* Modal Actions */
+.routine-modal-actions {
+  margin-top: 28px;
+}
+
+.routine-submit-btn {
+  --background: var(--ion-color-secondary, #74C69D);
+  --background-hover: #62be91;
+  --background-activated: #52B788;
+  --color: #FFFFFF;
+  --border-radius: 25px;
+  --box-shadow: 0 8px 24px rgba(116, 198, 157, 0.5);
+  font-weight: 700;
+  font-size: 1.02rem;
+  height: 52px;
+  letter-spacing: -0.01em;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.routine-submit-btn:hover:not([disabled]) {
+  transform: translateY(-1px);
+  --box-shadow: 0 10px 28px rgba(116, 198, 157, 0.6);
+}
+
+.routine-submit-btn:active:not([disabled]) {
+  transform: scale(0.98);
+  --box-shadow: 0 4px 12px rgba(116, 198, 157, 0.35);
+}
+
+/* ==========================================================================
+   Dark Mode Overrides
+   ========================================================================== */
+
+.ion-palette-dark .routine-modal-sheet,
+.dark .routine-modal-sheet {
+  --background: #182820;
+}
+
+.ion-palette-dark .routine-modal-header,
+.dark .routine-modal-header {
+  --background: #182820;
+}
+
+.ion-palette-dark .routine-modal-toolbar,
+.dark .routine-modal-toolbar {
+  --background: #182820;
+  --border-color: rgba(82, 183, 136, 0.15);
+}
+
+.ion-palette-dark .routine-modal-title,
+.dark .routine-modal-title {
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .routine-modal-close-btn,
+.dark .routine-modal-close-btn {
+  --color: #52B788;
+}
+
+.ion-palette-dark .routine-modal-content,
+.dark .routine-modal-content {
+  --background: #182820;
+}
+
+.ion-palette-dark .routine-field-label,
+.dark .routine-field-label {
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .routine-text-input,
+.dark .routine-text-input {
+  --background: #142019;
+  --color: #ECFDF5;
+  --placeholder-color: #6B7280;
+  border-color: #2F4538;
+}
+
+.ion-palette-dark .routine-text-input:focus-within,
+.dark .routine-text-input:focus-within {
+  border-color: #52B788;
+}
+
+.ion-palette-dark .routine-type-segment,
+.dark .routine-type-segment {
+  background: #142019;
+}
+
+.ion-palette-dark .routine-type-segment ion-segment-button,
+.dark .routine-type-segment ion-segment-button {
+  --color: #9CA3AF;
+  --background-checked: #52B788;
+  --color-checked: #0F1713;
+}
+
+.ion-palette-dark .category-chip,
+.dark .category-chip {
+  background: #142019;
+  border-color: rgba(82, 183, 136, 0.18);
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .category-chip:hover,
+.dark .category-chip:hover {
+  background: #1F3528;
+}
+
+.ion-palette-dark .category-chip.active,
+.dark .category-chip.active {
+  background: #52B788;
+  border-color: #52B788;
+  color: #0F1713;
+}
+
+.ion-palette-dark .builder-step-row,
+.dark .builder-step-row {
+  background: #142019;
+  border-color: rgba(82, 183, 136, 0.15);
+}
+
+.ion-palette-dark .builder-step-number,
+.dark .builder-step-number {
+  background: #52B788;
+  color: #0F1713;
+}
+
+.ion-palette-dark .builder-step-text,
+.dark .builder-step-text {
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .step-text-input,
+.dark .step-text-input {
+  --background: #142019;
+  --color: #ECFDF5;
+  border-color: #2F4538;
+}
+
+.ion-palette-dark .step-text-input:focus-within,
+.dark .step-text-input:focus-within {
+  border-color: #52B788;
+}
+
+.ion-palette-dark .add-step-btn,
+.dark .add-step-btn {
+  --background: #52B788;
+  --color: #0F1713;
+}
+
+.ion-palette-dark .suggestions-container,
+.dark .suggestions-container {
+  background: #142019;
+  border-color: rgba(82, 183, 136, 0.15);
+}
+
+.ion-palette-dark .suggestions-title,
+.dark .suggestions-title {
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .suggestion-pill,
+.dark .suggestion-pill {
+  background: #182820;
+  border-color: rgba(82, 183, 136, 0.25);
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .suggestion-pill:hover:not(:disabled),
+.dark .suggestion-pill:hover:not(:disabled) {
+  background: #52B788;
+  color: #0F1713;
+  border-color: #52B788;
+}
+
+.ion-palette-dark .suggestion-pill.added,
+.dark .suggestion-pill.added {
+  background: rgba(82, 183, 136, 0.2);
+  border-color: #52B788;
+  color: #52B788;
+}
+
+.ion-palette-dark .routine-submit-btn,
+.dark .routine-submit-btn {
+  --background: #52B788;
+  --color: #0F1713;
+  --box-shadow: 0 8px 24px rgba(82, 183, 136, 0.35);
+}
+

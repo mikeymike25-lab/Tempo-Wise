@@ -1,0 +1,101 @@
+.routine-checklist {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.routine-step-item {
+  --background: #FFFFFF;
+  --min-height: 44px;
+  --padding-start: 12px;
+  --padding-end: 12px;
+  --inner-padding-end: 8px;
+  margin-bottom: 6px;
+  border-radius: 12px;
+  border: 1px solid rgba(27, 67, 50, 0.08);
+  transition: all 0.2s ease;
+}
+
+.routine-step-item:last-child {
+  margin-bottom: 0;
+}
+
+.routine-step-item:hover {
+  border-color: rgba(116, 198, 157, 0.4);
+  background: #FAFCFA;
+}
+
+.routine-step-item.step-completed {
+  --background: rgba(116, 198, 157, 0.1);
+  border-color: rgba(116, 198, 157, 0.25);
+}
+
+.routine-step-checkbox {
+  --size: 20px;
+  --checkbox-background-checked: var(--ion-color-secondary, #74C69D);
+  --border-color-checked: var(--ion-color-secondary, #74C69D);
+  --checkmark-color: #FFFFFF;
+  --border-radius: 6px;
+  --border-color: #74C69D;
+  margin-inline-end: 12px;
+  transition: transform 0.15s ease;
+}
+
+.routine-step-checkbox:active {
+  transform: scale(0.92);
+}
+
+.routine-step-label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #1B1B1B;
+  transition: color 0.2s ease;
+  white-space: normal;
+  line-height: 1.35;
+}
+
+.step-completed .routine-step-label {
+  color: #88968F;
+  text-decoration: line-through;
+}
+
+/* ==========================================================================
+   Dark Mode Overrides
+   ========================================================================== */
+
+.ion-palette-dark .routine-step-item,
+.dark .routine-step-item {
+  --background: #142019;
+  border-color: rgba(82, 183, 136, 0.15);
+}
+
+.ion-palette-dark .routine-step-item:hover,
+.dark .routine-step-item:hover {
+  border-color: rgba(82, 183, 136, 0.35);
+  background: #182820;
+}
+
+.ion-palette-dark .routine-step-item.step-completed,
+.dark .routine-step-item.step-completed {
+  --background: rgba(82, 183, 136, 0.12);
+  border-color: rgba(82, 183, 136, 0.25);
+}
+
+.ion-palette-dark .routine-step-checkbox,
+.dark .routine-step-checkbox {
+  --checkbox-background-checked: #52B788;
+  --border-color-checked: #52B788;
+  --checkmark-color: #0F1713;
+  --border-color: #52B788;
+}
+
+.ion-palette-dark .routine-step-label,
+.dark .routine-step-label {
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .step-completed .routine-step-label,
+.dark .step-completed .routine-step-label {
+  color: #6B7280;
+}
+

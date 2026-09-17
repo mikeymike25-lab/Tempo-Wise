@@ -1,0 +1,665 @@
+.home-content {
+  --background: #FFFFFF;
+}
+
+.home-scroll-container {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  padding-top: 24px;
+  min-height: 100%;
+  padding-bottom: 120px;
+  background: transparent;
+}
+
+/* Background Waves */
+.home-waves-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 230px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.home-waves-bg svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Header Content */
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.greeting-text h2 {
+  color: #6B7280;
+  font-size: 0.92rem;
+  margin: 0 0 3px 0;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.greeting-text h1 {
+  color: #1B4332;
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin: 0 0 4px 0;
+  letter-spacing: -0.5px;
+}
+
+.greeting-text p {
+  color: #6B7280;
+  font-size: 0.86rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.header-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.notification-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #F3F4F6;
+  border: 1px solid #E5E7EB;
+  color: #1B4332;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.notification-btn:hover {
+  transform: scale(1.05);
+  background: #E5E7EB;
+}
+
+.notification-bell {
+  font-size: 22px;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--ion-color-danger);
+  border-radius: 50%;
+  border: 2px solid var(--ion-color-primary);
+}
+
+.profile-avatar {
+  width: 48px;
+  height: 48px;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.05);
+}
+
+/* Today's Focus Card - Mint Green Hero Container */
+.focus-card {
+  margin: 0 0 24px 0;
+  border-radius: 22px;
+  box-shadow: 0 8px 24px rgba(27, 67, 50, 0.08);
+  background: linear-gradient(145deg, #E6F6ED 0%, #D4EFE0 100%);
+  border: 1.5px solid #74C69D;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.focus-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(27, 67, 50, 0.12);
+}
+
+.focus-card-header {
+  padding: 18px 20px 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.focus-card-title {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #1B4332;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.focus-icon-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: #FFFFFF;
+  color: #1B4332;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  box-shadow: 0 2px 6px rgba(27, 67, 50, 0.08);
+  flex-shrink: 0;
+}
+
+.priority-badge {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: var(--ion-color-danger);
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.priority-badge.done {
+  background: #FFFFFF;
+  color: #1B4332;
+  border: 1px solid rgba(116, 198, 157, 0.5);
+  box-shadow: 0 2px 6px rgba(27, 67, 50, 0.05);
+  font-weight: 800;
+}
+
+.focus-card-content {
+  padding: 0 20px 20px 20px;
+}
+
+.focus-card-content h2 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1B4332;
+  margin: 2px 0 6px 0;
+  letter-spacing: -0.3px;
+  line-height: 1.25;
+}
+
+.focus-card-content p {
+  font-size: 0.92rem;
+  color: #2C4D3D;
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.focus-card-action-row {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.focus-free-btn,
+.focus-launch-btn {
+  --background: #1B4332;
+  --background-hover: #2D6A4F;
+  --background-activated: #183B2C;
+  --color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.88rem;
+  height: 40px;
+  --border-radius: 20px;
+  --padding-start: 18px;
+  --padding-end: 18px;
+  --box-shadow: 0 4px 12px rgba(27, 67, 50, 0.25);
+  margin: 0;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.focus-free-btn ion-icon,
+.focus-launch-btn ion-icon {
+  font-size: 1.1rem;
+  margin-right: 6px;
+}
+
+.focus-free-btn:hover,
+.focus-launch-btn:hover {
+  transform: translateY(-1px);
+  --box-shadow: 0 6px 16px rgba(27, 67, 50, 0.32);
+}
+
+.focus-free-btn:active,
+.focus-launch-btn:active {
+  transform: scale(0.97);
+}
+
+/* Home FAB */
+.home-fab {
+  margin-bottom: 16px;
+  margin-right: 8px;
+}
+
+.home-fab ion-fab-button {
+  --background: var(--ion-color-secondary, #74C69D);
+  --color: #FFFFFF;
+  --box-shadow: 0 8px 24px rgba(116, 198, 157, 0.5);
+}
+
+/* Today's Progress */
+.progress-container {
+  margin-bottom: 32px;
+}
+
+.section-title {
+  color: #1B4332;
+  font-weight: 700;
+}
+
+.progress-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+  border: 1.5px solid #E5E7EB;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.progress-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #4B5563;
+}
+
+.progress-percent {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ion-color-secondary, #74C69D);
+}
+
+.progress-bar-bg {
+  height: 16px;
+  background: #F0F2F5;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--ion-color-secondary, #74C69D);
+  border-radius: 8px;
+  position: relative;
+  transition: width 0.8s ease-in-out;
+}
+
+/* Add a subtle shine animation to the progress bar */
+.progress-bar-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translateX(-100%);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Section Header Row */
+.section-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.section-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--ion-color-secondary, #74C69D);
+  text-decoration: none;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.section-link:hover {
+  color: #2D6A4F;
+  transform: translateX(2px);
+}
+
+.section-link ion-icon {
+  font-size: 13px;
+}
+
+/* Focus Card Actions */
+.focus-card-action-row {
+  margin-top: 14px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.focus-launch-btn {
+  --background: var(--ion-color-secondary, #74C69D);
+  --color: #FFFFFF;
+  --box-shadow: 0 4px 12px rgba(116, 198, 157, 0.4);
+  font-weight: 600;
+  font-size: 0.85rem;
+  height: 36px;
+  margin: 0;
+}
+
+.focus-free-btn {
+  --color: #1B4332;
+  --border-color: #74C69D;
+  font-weight: 600;
+  font-size: 0.85rem;
+  height: 36px;
+  margin: 0;
+}
+
+.focus-card-all-done {
+  border-color: rgba(116, 198, 157, 0.6);
+  background: linear-gradient(180deg, #FFFFFF 0%, #F4FAF6 100%);
+}
+
+.focus-icon-circle.done {
+  background: rgba(116, 198, 157, 0.3);
+  color: #15803D;
+}
+
+.priority-badge.done {
+  background-color: rgba(116, 198, 157, 0.2);
+  color: #15803D;
+}
+
+.empty-focus-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/* Today's Schedule / Tasks Section */
+.home-schedule-section {
+  margin-bottom: 24px;
+}
+
+.home-task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.home-task-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #FFFFFF;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 16px;
+  padding: 14px 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.home-task-item:hover {
+  transform: translateY(-1px);
+  border-color: rgba(116, 198, 157, 0.5);
+}
+
+.home-task-item.is-completed {
+  background: #F9FAFB;
+  border-color: #E5E7EB;
+  opacity: 0.82;
+}
+
+.home-task-checkbox {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #D1D5DB;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.home-task-checkbox:hover {
+  color: #74C69D;
+  transform: scale(1.1);
+}
+
+.home-task-checkbox.checked {
+  color: #15803D;
+}
+
+.home-task-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  cursor: pointer;
+}
+
+.home-task-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1B1B1B;
+  transition: color 0.15s ease;
+}
+
+.home-task-title.strikethrough {
+  text-decoration: line-through;
+  color: #9CA3AF;
+}
+
+.home-task-meta {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  color: #6B7280;
+  font-weight: 500;
+}
+
+.home-task-meta ion-icon {
+  font-size: 13px;
+  color: #74C69D;
+}
+
+.home-task-priority {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 12px;
+  letter-spacing: 0.3px;
+}
+
+.home-task-priority.high {
+  background: rgba(239, 68, 68, 0.12);
+  color: #DC2626;
+}
+
+.home-task-priority.medium {
+  background: rgba(245, 158, 11, 0.14);
+  color: #D97706;
+}
+
+.home-task-priority.low {
+  background: rgba(116, 198, 157, 0.2);
+  color: #15803D;
+}
+
+.home-empty-schedule {
+  padding: 24px;
+  text-align: center;
+  background: #FFFFFF;
+  border-radius: 16px;
+  border: 1px dashed #E5E7EB;
+  color: #6B7280;
+  font-size: 0.9rem;
+}
+
+/* Dark Mode Overrides */
+.ion-palette-dark .home-content,
+.dark .home-content {
+  --background: #0F1713;
+}
+
+.ion-palette-dark .greeting-text h2,
+.dark .greeting-text h2 {
+  color: #52B788;
+}
+
+.ion-palette-dark .greeting-text h1,
+.dark .greeting-text h1 {
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .greeting-text p,
+.dark .greeting-text p {
+  color: #9CA3AF;
+}
+
+.ion-palette-dark .focus-card,
+.dark .focus-card {
+  background: linear-gradient(145deg, #182820 0%, #1D3528 100%);
+  border-color: rgba(82, 183, 136, 0.35);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+}
+
+.ion-palette-dark .focus-card-title,
+.dark .focus-card-title,
+.ion-palette-dark .focus-card-content h2,
+.dark .focus-card-content h2 {
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .focus-card-content p,
+.dark .focus-card-content p {
+  color: #A7BDB1;
+}
+
+.ion-palette-dark .focus-icon-circle,
+.dark .focus-icon-circle {
+  background: #142019;
+  color: #52B788;
+  box-shadow: none;
+  border: 1px solid rgba(82, 183, 136, 0.3);
+}
+
+.ion-palette-dark .priority-badge.done,
+.dark .priority-badge.done {
+  background: #142019;
+  color: #52B788;
+  border-color: rgba(82, 183, 136, 0.35);
+  box-shadow: none;
+}
+
+.ion-palette-dark .focus-free-btn,
+.dark .focus-free-btn,
+.ion-palette-dark .focus-launch-btn,
+.dark .focus-launch-btn {
+  --background: #52B788;
+  --background-hover: #63BE94;
+  --background-activated: #48A178;
+  --color: #0F1713;
+  --box-shadow: 0 4px 12px rgba(82, 183, 136, 0.35);
+}
+
+.ion-palette-dark .progress-card,
+.dark .progress-card {
+  background: #182820;
+  border-color: rgba(116, 198, 157, 0.18);
+}
+
+.ion-palette-dark .section-title,
+.dark .section-title {
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .section-link,
+.dark .section-link {
+  color: #74C69D;
+}
+
+.ion-palette-dark .progress-text,
+.dark .progress-text {
+  color: #D1D5DB;
+}
+
+.ion-palette-dark .progress-bar-bg,
+.dark .progress-bar-bg {
+  background: #25382E;
+}
+
+.ion-palette-dark .home-task-item,
+.dark .home-task-item {
+  background: #182820;
+  border-color: rgba(116, 198, 157, 0.15);
+}
+
+.ion-palette-dark .home-task-title,
+.dark .home-task-title {
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .home-task-meta,
+.dark .home-task-meta {
+  color: #9CA3AF;
+}
+
+.ion-palette-dark .home-task-item.is-completed,
+.dark .home-task-item.is-completed {
+  background: #142019;
+  border-color: rgba(116, 198, 157, 0.08);
+}
+
+.ion-palette-dark .home-task-item.is-completed .home-task-title,
+.dark .home-task-item.is-completed .home-task-title {
+  color: #6B7280;
+}
+
+.ion-palette-dark .home-empty-schedule,
+.dark .home-empty-schedule {
+  background: #182820;
+  border-color: rgba(116, 198, 157, 0.2);
+  color: #9CA3AF;
+}
+
+.ion-palette-dark .notification-btn,
+.dark .notification-btn {
+  background: #182820;
+  border-color: rgba(116, 198, 157, 0.2);
+  color: #74C69D;
+}

@@ -1,0 +1,485 @@
+.reminder-modal-sheet {
+  --background: #FFFFFF;
+  --border-radius: 24px 24px 0 0;
+}
+
+.reminder-modal-header {
+  --background: #FFFFFF;
+}
+
+.reminder-modal-toolbar {
+  --background: #FFFFFF;
+  --border-color: rgba(27, 67, 50, 0.08);
+  --border-width: 0 0 1px 0;
+  padding: 4px 12px;
+}
+
+.reminder-modal-title {
+  color: #1B4332;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.reminder-modal-close-btn {
+  --color: #1B4332;
+  font-size: 1.4rem;
+}
+
+.reminder-modal-content {
+  --background: #FFFFFF;
+}
+
+.reminder-modal-inner {
+  padding: 16px 20px 32px 20px;
+}
+
+.reminder-error-banner {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #DC2626;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.reminder-form-group {
+  margin-bottom: 20px;
+}
+
+.reminder-field-label {
+  display: flex;
+  align-items: center;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1B4332;
+  margin-bottom: 8px;
+  letter-spacing: -0.1px;
+}
+
+.reminder-text-input {
+  --background: #F2F7F4;
+  --padding-start: 14px;
+  --padding-end: 14px;
+  --placeholder-color: #88968F;
+  --color: #1B1B1B;
+  border-radius: 14px;
+  border: 1.5px solid transparent;
+  font-size: 0.95rem;
+  font-weight: 500;
+  min-height: 48px;
+  transition: border-color 0.2s ease;
+}
+
+.reminder-text-input:focus-within {
+  border-color: #74C69D;
+}
+
+/* Link mode chips */
+.link-mode-chips {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.link-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 18px;
+  background: #F2F7F4;
+  border: 1.5px solid rgba(27, 67, 50, 0.08);
+  color: #1B4332;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.link-chip:hover {
+  background: #E5EFE9;
+}
+
+.link-chip.active {
+  background: var(--ion-color-secondary, #74C69D);
+  border-color: var(--ion-color-secondary, #74C69D);
+  color: #FFFFFF;
+  box-shadow: 0 3px 10px rgba(116, 198, 157, 0.4);
+  font-weight: 700;
+}
+
+.linked-selector-box {
+  background: #FAF7F0;
+  border: 1px solid rgba(27, 67, 50, 0.08);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.selector-hint {
+  display: block;
+  font-size: 0.8rem;
+  color: #6B7280;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.linked-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 160px;
+  overflow-y: auto;
+}
+
+.linked-item-pill {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid rgba(27, 67, 50, 0.1);
+  border-radius: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.linked-item-pill:hover {
+  border-color: #74C69D;
+}
+
+.linked-item-pill.selected {
+  border-color: #1B4332;
+  background: rgba(116, 198, 157, 0.15);
+}
+
+.linked-item-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1B4332;
+}
+
+.linked-item-sub {
+  font-size: 0.78rem;
+  color: #6B7280;
+}
+
+.linked-check {
+  color: #1B4332;
+  font-size: 1.1rem;
+}
+
+/* Date / Time Card Selectors */
+.reminder-picker-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F2F7F4;
+  border-radius: 14px;
+  padding: 12px 16px;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.reminder-picker-card:hover {
+  border-color: #74C69D;
+}
+
+.picker-card-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.picker-icon {
+  font-size: 1.2rem;
+  color: #1B4332;
+}
+
+.picker-value-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1B1B1B;
+}
+
+.picker-chevron {
+  font-size: 1rem;
+  color: #6B7280;
+}
+
+.datetime-expand-box {
+  background: #FFFFFF;
+  border: 1px solid rgba(116, 198, 157, 0.25);
+  border-radius: 16px;
+  padding: 10px;
+  margin-top: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.datetime-expand-box ion-datetime {
+  --background: #FFFFFF;
+  --ion-color-primary: #1B4332;
+  margin: 0 auto;
+}
+
+/* Repeat & Notify Chips */
+.repeat-chips-row,
+.notify-chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.repeat-chip,
+.notify-chip {
+  padding: 7px 12px;
+  border-radius: 16px;
+  background: #F2F7F4;
+  border: 1px solid rgba(27, 67, 50, 0.08);
+  color: #1B4332;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.repeat-chip:hover,
+.notify-chip:hover {
+  background: #E5EFE9;
+}
+
+.repeat-chip.active,
+.notify-chip.active {
+  background: var(--ion-color-secondary, #74C69D);
+  border-color: var(--ion-color-secondary, #74C69D);
+  color: #FFFFFF;
+  box-shadow: 0 3px 10px rgba(116, 198, 157, 0.4);
+  font-weight: 700;
+}
+
+/* Notes Textarea */
+.reminder-textarea {
+  --background: #F2F7F4;
+  --padding-start: 14px;
+  --padding-end: 14px;
+  --padding-top: 10px;
+  --placeholder-color: #88968F;
+  --color: #1B1B1B;
+  border-radius: 14px;
+  font-size: 0.92rem;
+}
+
+/* Modal Actions */
+.reminder-modal-actions {
+  margin-top: 24px;
+}
+
+.reminder-submit-btn {
+  --background: var(--ion-color-secondary, #74C69D);
+  --background-hover: #62be91;
+  --background-activated: #52B788;
+  --color: #FFFFFF;
+  --border-radius: 25px;
+  --box-shadow: 0 8px 24px rgba(116, 198, 157, 0.5);
+  font-weight: 700;
+  font-size: 1.02rem;
+  height: 52px;
+  letter-spacing: -0.01em;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.reminder-submit-btn:hover:not([disabled]) {
+  transform: translateY(-1px);
+  --box-shadow: 0 10px 28px rgba(116, 198, 157, 0.6);
+}
+
+.reminder-submit-btn:active:not([disabled]) {
+  transform: scale(0.98);
+  --box-shadow: 0 4px 12px rgba(116, 198, 157, 0.35);
+}
+
+/* ==========================================================================
+   Dark Mode Overrides
+   ========================================================================== */
+
+.ion-palette-dark .reminder-modal-sheet,
+.dark .reminder-modal-sheet {
+  --background: #182820;
+}
+
+.ion-palette-dark .reminder-modal-header,
+.dark .reminder-modal-header {
+  --background: #182820;
+}
+
+.ion-palette-dark .reminder-modal-toolbar,
+.dark .reminder-modal-toolbar {
+  --background: #182820;
+  --border-color: rgba(82, 183, 136, 0.15);
+}
+
+.ion-palette-dark .reminder-modal-title,
+.dark .reminder-modal-title {
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .reminder-modal-close-btn,
+.dark .reminder-modal-close-btn {
+  --color: #52B788;
+}
+
+.ion-palette-dark .reminder-modal-content,
+.dark .reminder-modal-content {
+  --background: #182820;
+}
+
+.ion-palette-dark .reminder-field-label,
+.dark .reminder-field-label {
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .reminder-text-input,
+.dark .reminder-text-input {
+  --background: #142019;
+  --color: #ECFDF5;
+  --placeholder-color: #6B7280;
+  border-color: #2F4538;
+}
+
+.ion-palette-dark .reminder-text-input:focus-within,
+.dark .reminder-text-input:focus-within {
+  border-color: #52B788;
+}
+
+.ion-palette-dark .link-chip,
+.dark .link-chip {
+  background: #142019;
+  border-color: rgba(82, 183, 136, 0.18);
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .link-chip:hover,
+.dark .link-chip:hover {
+  background: #1F3528;
+}
+
+.ion-palette-dark .link-chip.active,
+.dark .link-chip.active {
+  background: #52B788;
+  border-color: #52B788;
+  color: #0F1713;
+}
+
+.ion-palette-dark .linked-selector-box,
+.dark .linked-selector-box {
+  background: #142019;
+  border-color: rgba(82, 183, 136, 0.15);
+}
+
+.ion-palette-dark .selector-hint,
+.dark .selector-hint {
+  color: #9CA3AF;
+}
+
+.ion-palette-dark .linked-item-pill,
+.dark .linked-item-pill {
+  background: #182820;
+  border-color: rgba(82, 183, 136, 0.2);
+}
+
+.ion-palette-dark .linked-item-pill.selected,
+.dark .linked-item-pill.selected {
+  border-color: #52B788;
+  background: rgba(82, 183, 136, 0.18);
+}
+
+.ion-palette-dark .linked-item-title,
+.dark .linked-item-title {
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .linked-item-sub,
+.dark .linked-item-sub {
+  color: #9CA3AF;
+}
+
+.ion-palette-dark .linked-check,
+.dark .linked-check {
+  color: #52B788;
+}
+
+.ion-palette-dark .reminder-picker-card,
+.dark .reminder-picker-card {
+  background: #142019;
+  border-color: #2F4538;
+}
+
+.ion-palette-dark .picker-icon,
+.dark .picker-icon {
+  color: #52B788;
+}
+
+.ion-palette-dark .picker-value-text,
+.dark .picker-value-text {
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .picker-chevron,
+.dark .picker-chevron {
+  color: #9CA3AF;
+}
+
+.ion-palette-dark .datetime-expand-box,
+.dark .datetime-expand-box {
+  background: #142019;
+  border-color: rgba(82, 183, 136, 0.25);
+}
+
+.ion-palette-dark .datetime-expand-box ion-datetime,
+.dark .datetime-expand-box ion-datetime {
+  --background: #142019;
+  --ion-color-primary: #52B788;
+}
+
+.ion-palette-dark .repeat-chip,
+.dark .repeat-chip,
+.ion-palette-dark .notify-chip,
+.dark .notify-chip {
+  background: #142019;
+  border-color: rgba(82, 183, 136, 0.18);
+  color: #ECFDF5;
+}
+
+.ion-palette-dark .repeat-chip:hover,
+.dark .repeat-chip:hover,
+.ion-palette-dark .notify-chip:hover,
+.dark .notify-chip:hover {
+  background: #1F3528;
+}
+
+.ion-palette-dark .repeat-chip.active,
+.dark .repeat-chip.active,
+.ion-palette-dark .notify-chip.active,
+.dark .notify-chip.active {
+  background: #52B788;
+  border-color: #52B788;
+  color: #0F1713;
+}
+
+.ion-palette-dark .reminder-textarea,
+.dark .reminder-textarea {
+  --background: #142019;
+  --color: #ECFDF5;
+  --placeholder-color: #6B7280;
+}
+
+.ion-palette-dark .reminder-submit-btn,
+.dark .routine-submit-btn {
+  --background: #52B788;
+  --color: #0F1713;
+  --box-shadow: 0 8px 24px rgba(82, 183, 136, 0.35);
+}
+

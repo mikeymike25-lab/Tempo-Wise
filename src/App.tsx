@@ -1,19 +1,16 @@
+import React from 'react';
 import { Navigate, Route } from 'react-router-dom';
-import {
-  IonApp,
-  IonIcon,
-  IonLabel,
-  IonRouterOutlet,
-  IonTabBar,
-  IonTabButton,
-  IonTabs,
-  setupIonicReact
-} from '@ionic/react';
+import { IonAlert, IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle } from 'ionicons/icons';
-import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
-import Tab3 from './pages/Tab3';
+import MainTabs from './pages/MainTabs';
+import Splash from './pages/Splash';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import { UserProvider, useUser } from './data/UserContext';
+import { TaskProvider } from './data/TaskContext';
+import { FocusProvider } from './data/FocusContext';
+import { RoutineProvider } from './data/RoutineContext';
+import { ReminderProvider, useReminders } from './data/ReminderContext';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -32,48 +29,89 @@ import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 
 /**
- * Ionic Dark Mode
- * -----------------------------------------------------
- * For more info, please see:
- * https://ionicframework.com/docs/theming/dark-mode
+ * Ionic Dark Mode Palette
  */
-
-/* import '@ionic/react/css/palettes/dark.always.css'; */
-/* import '@ionic/react/css/palettes/dark.class.css'; */
-import '@ionic/react/css/palettes/dark.system.css';
+import '@ionic/react/css/palettes/dark.class.css';
 
 /* Theme variables */
 import './theme/variables.css';
 
 setupIonicReact();
 
-const App: React.FC = () => (
-  <IonApp>
+const AppRoutes: React.FC = () => {
+  const { isLoggedIn, login } = useUser();
+
+  return (
     <IonReactRouter>
-      <IonTabs>
-        <IonRouterOutlet>
-          <Route path="/tab1" element={<Tab1 />} />
-          <Route path="/tab2" element={<Tab2 />} />
-          <Route path="/tab3" element={<Tab3 />} />
-          <Route path="/" element={<Navigate to="/tab1" replace />} />
-        </IonRouterOutlet>
-        <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon aria-hidden="true" icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon aria-hidden="true" icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon aria-hidden="true" icon={square} />
-            <IonLabel>Tab 3</IonLabel>
-          </IonTabButton>
-        </IonTabBar>
-      </IonTabs>
+      <IonRouterOutlet>
+        {/* Public Routes */}
+        <Route path="/splash" element={<Splash />} />
+        <Route path="/login" element={<Login onLogin={login} />} />
+        <Route path="/signup" element={<Signup onLogin={login} />} />
+
+        {/* Protected Routes (With Tab Bar) */}
+        <Route
+          path="/app/*"
+          element={isLoggedIn ? <MainTabs /> : <Navigate to="/splash" replace />}
+        />
+
+        {/* Default Route */}
+        <Route
+          path="/"
+          element={<Navigate to={isLoggedIn ? "/app/home" : "/splash"} replace />}
+        />
+      </IonRouterOutlet>
     </IonReactRouter>
-  </IonApp>
-);
+  );
+};
+
+const GlobalReminderAlert: React.FC = () => {
+  const { activeAlert, dismissAlert, toggleReminder } = useReminders();
+
+  return (
+    <IonAlert
+      isOpen={!!activeAlert}
+      header="Reminder Alert"
+      subHeader={activeAlert ? `${activeAlert.label} (${activeAlert.time})` : ''}
+      message={activeAlert?.notes || 'It is time for your scheduled reminder.'}
+      buttons={[
+        {
+          text: 'Dismiss',
+          role: 'cancel',
+          handler: () => dismissAlert(),
+        },
+        {
+          text: 'Mark Complete',
+          handler: () => {
+            if (activeAlert) {
+              toggleReminder(activeAlert.id);
+            }
+            dismissAlert();
+          },
+        },
+      ]}
+      onDidDismiss={() => dismissAlert()}
+    />
+  );
+};
+
+const App: React.FC = () => {
+  return (
+    <IonApp>
+      <UserProvider>
+        <TaskProvider>
+          <FocusProvider>
+            <RoutineProvider>
+              <ReminderProvider>
+                <AppRoutes />
+                <GlobalReminderAlert />
+              </ReminderProvider>
+            </RoutineProvider>
+          </FocusProvider>
+        </TaskProvider>
+      </UserProvider>
+    </IonApp>
+  );
+};
 
 export default App;

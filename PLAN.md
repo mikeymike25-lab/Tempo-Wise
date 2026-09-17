@@ -68,3 +68,10 @@ Built with Ionic React. Work in order (see AGENTS.md).
 - [x] 11.4 Wire Contexts with real-time Firestore listeners (`onSnapshot`) + offline cache persistence (`TaskContext`, `RoutineContext`, `FocusContext`, `ReminderContext`)
 - [x] 11.5 Hybrid Fallback & Data Migration (allow offline/demo mode without credentials, auto-seed or migrate local data on sign up)
 - [x] 11.6 Add Firebase Security Rules (`firestore.rules`) & update tests/build verification
+
+## Phase 12 — Production Deployment & Git
+- [x] 12.1 Protect sensitive `.env` credentials in `.gitignore`
+- [x] 12.2 Configure Vercel client-side routing rewrites (`vercel.json`)
+- [x] 12.3 Clean production build validation (`npm run build`)
+- [ ] 12.4 Add GitHub remote and push repository
+- [ ] 12.5 Deploy to Vercel and configure production environment variables

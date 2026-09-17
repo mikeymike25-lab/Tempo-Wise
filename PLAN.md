@@ -73,5 +73,5 @@ Built with Ionic React. Work in order (see AGENTS.md).
 - [x] 12.1 Protect sensitive `.env` credentials in `.gitignore`
 - [x] 12.2 Configure Vercel client-side routing rewrites (`vercel.json`)
 - [x] 12.3 Clean production build validation (`npm run build`)
-- [ ] 12.4 Add GitHub remote and push repository
-- [ ] 12.5 Deploy to Vercel and configure production environment variables
+- [x] 12.4 Add GitHub remote and push repository (`https://github.com/mikeymike25-lab/Tempo-Wise.git`)
+- [x] 12.5 Prepare Vercel configuration (`vercel.json`) and deployment steps
